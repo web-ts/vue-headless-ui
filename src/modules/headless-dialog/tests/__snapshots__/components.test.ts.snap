@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`dialog > should be closed by default 1`] = `"Open Dialog"`;
+
+exports[`dialog > should be open by default 1`] = `"Open Dialogdialog_titledialog_description"`;
+
+exports[`dialog > should close 1`] = `"Open Dialog"`;
+
+exports[`dialog > should open 1`] = `"Open Dialogdialog_titledialog_description"`;

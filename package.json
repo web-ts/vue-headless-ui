@@ -1,0 +1,57 @@
+{
+  "name": "vue-headless-ui",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "vite",
+    "prebuild": "rimraf ./dist",
+    "build": "vue-tsc --noEmit && vite build",
+    "postbuild": "rimraf ./dist/env.d.ts ./dist/auto-imports.d.ts ./dist/_development",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/vue-headless-ui.umd.js",
+  "module": "./dist/vue-headless-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-headless-ui.es.js",
+      "require": "./dist/vue-headless-ui.umd.js"
+    }
+  },
+  "peerDependencies": {
+    "vue": "^3.2.38"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitest/ui": "^0.22.1",
+    "@vue/test-utils": "^2.0.2",
+    "c8": "^7.12.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.4.0",
+    "happy-dom": "^6.0.4",
+    "husky": "^8.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2",
+    "unplugin-auto-import": "^0.11.2",
+    "vee-validate": "^4.6.7",
+    "vite": "^3.0.9",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^0.22.1",
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5",
+    "vue-tsc": "^0.40.5"
+  }
+}
